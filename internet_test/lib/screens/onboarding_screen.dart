@@ -17,12 +17,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       "color": Colors.deepOrange,
       "title": "Welcome to SpeedTest",
-      "description": "Test your internet speed with accuracy."
+      "description": "Test your internet speed with accuracy.",
+      image: 'assets/images/onboarding_1.png',
     },
     {
       "color": Colors.green,
       "title": "Real-Time Results",
       "description": "Get real-time speed test results and insights."
+       image: Image.asset('assets/images/onboarding_1.png'),
+
     },
     {
       "color": Colors.blue,
@@ -55,6 +58,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                       Image.asset(
+                        onboardingPages[index]['image'],
+                        height: 200,  
+                      ),
                       Text(
                         onboardingPages[index]['title'],
                         style: const TextStyle(
